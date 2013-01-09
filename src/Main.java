@@ -8,19 +8,21 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-
-
 public class Main extends JPanel implements Runnable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	public static final int WIDTH = 160;
 	public static final int HEIGHT = 120;
 	public static final int SCALE = 4;
 	
 	boolean running;
+	
 	Game game;
 	Thread thread;
 	Image dbImage;
 	Graphics dbg;
+	
 	
 	public Main() {
 		Dimension size = new Dimension(WIDTH * SCALE, HEIGHT * SCALE);
@@ -28,6 +30,7 @@ public class Main extends JPanel implements Runnable {
 		setPreferredSize(size);
 		setMinimumSize(size);
 		setMaximumSize(size);
+		//addKeyListener();
 		
 		game = new Game();
 	}
