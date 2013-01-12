@@ -34,6 +34,13 @@ public class Game extends JPanel {
 			if (enemy.getY() - enemy.getHeight() > Main.HEIGHT * Main.SCALE)
 				i.remove();
 		}
+		/*Iterator<Enemy> i = enemies.iterator();
+		while (i.hasNext()) {
+			Enemy enemy = i.next();
+			if (enemy.getY() - enemy.getHeight() > Main.HEIGHT * Main.SCALE) {
+				i.remove();
+			}				
+		}*/
 	}
 	
 	public void draw(Graphics g) {
