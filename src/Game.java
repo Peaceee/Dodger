@@ -31,16 +31,10 @@ public class Game extends JPanel {
 	public void removeEnemies() {
 		for (Iterator<Enemy> i = enemies.iterator(); i.hasNext();) {
 			Enemy enemy = i.next();
-			if (enemy.getY() - enemy.getHeight() > Main.HEIGHT * Main.SCALE)
-				i.remove();
-		}
-		/*Iterator<Enemy> i = enemies.iterator();
-		while (i.hasNext()) {
-			Enemy enemy = i.next();
 			if (enemy.getY() - enemy.getHeight() > Main.HEIGHT * Main.SCALE) {
 				i.remove();
 			}				
-		}*/
+		}
 	}
 	
 	public void draw(Graphics g) {
